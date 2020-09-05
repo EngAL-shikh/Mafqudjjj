@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/ll_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/minu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/minu"></ImageView>
+
+            <TextView
+                android:id="@+id/tv_news_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:textColor="#979494"
+                android:textSize="20sp"></TextView>
+
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/ic_search_black_24dp"></ImageView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <SearchView
+                android:id="@+id/searchview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:closeIcon="@drawable/ic_search_black_24dp"
+                android:iconifiedByDefault="false"
+                android:queryHint="بحث..."></SearchView>
+
+            <ImageView
+                android:id="@+id/iv_back_search"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/b"></ImageView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bar2"
+            style="@style/Widget.MaterialComponents.BottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="#FFAF1D"
+            android:elevation="8dp"
+            android:background="@drawable/myrect"
+
+
+
+            app:fabAlignmentMode="center"
+
+            app:fabCradleRoundedCornerRadius="24dp"
+
+
+            app:fabCradleVerticalOffset="12dp"
+            app:hideOnScroll="true"
+            app:navigationIcon="@drawable/ic_search_black_24dp" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addnewpost_id"
+            android:translationZ="90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            app:backgroundTint="#FFAF1D"
+            app:elevation="0dp"
+
+            app:layout_anchor="@id/bar2" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_whatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="ltr"
+                    android:textAlignment="textStart"
+                    app:tabBackground="@color/white"
+                    app:tabIndicator="@color/cardview_dark_background"
+                    app:tabIndicatorColor="@color/white"
+                    app:tabIndicatorHeight="2.5dp"
+                    app:tabInlineLabel="true"
+                    app:tabSelectedTextColor="@color/black"
+                    app:tabTextColor="@color/colorSecondaryText">
+
+
+                </com.google.android.material.tabs.TabLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+
+                >
+
+            </androidx.viewpager.widget.ViewPager>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</LinearLayout>
+
+
+
+

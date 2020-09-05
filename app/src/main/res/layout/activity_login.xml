@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBC02D"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Login">
+
+
+    <ImageView
+        android:layout_width="229dp"
+        android:layout_height="127dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:paddingTop="20dp"
+        android:src="@drawable/b">
+
+    </ImageView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="562dp"
+        android:background="@color/selver"
+        app:cardCornerRadius="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="594dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:paddingTop="40dp">
+
+
+            <EditText
+                android:id="@+id/et_login_email"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/emailpassword"
+                android:drawableRight="@drawable/email"
+
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:fontFamily="@font/gg"
+                android:hint="قم بأدخال البريد الالكتروني "
+                android:inputType="textEmailAddress"
+                android:src="@drawable/email"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@+id/et_login_pass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_login_pass"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/emailpassword"
+                android:drawableRight="@drawable/lock"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:fontFamily="@font/gg"
+                android:gravity="right"
+                android:hint="قم بأدخال كلمة المرور"
+                android:inputType="textPassword"
+                android:paddingTop="10dp"
+                android:password="true"
+                android:src="@drawable/lock"
+
+                android:textSize="20sp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/et_login_email" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <Button
+
+                    android:id="@+id/bt_login"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/butblue"
+                    android:shadowColor="#FBC02D"
+                    android:fontFamily="@font/gg"
+                    android:text="تسجيل الدخول"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_login_pass" />
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bt_sinup"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ggggggg"
+                        android:text="انشاء حساب" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/gg"
+                        android:text="انا  لا امتلك حساب؟ " />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
