@@ -29,8 +29,8 @@ class Deco : Fragment() {
 
 
         var posts=ArrayList<Post>()
-
-        var url="http://flexuous-babies.000webhostapp.com/getDeco.php"
+        var url= "http://192.168.1.3/mafqud/getDeco.php"
+        //var url="http://flexuous-babies.000webhostapp.com/getDeco.php"
         var stringRequset=object : StringRequest(Method.POST,url, Response.Listener {
 
 
@@ -62,7 +62,9 @@ class Deco : Fragment() {
                                 dateandtime = jsonObject.getString("date"),
                         tvstatus = jsonObject.getString("status")
                         ,
-                        location = jsonObject.getString("location")
+                        location = jsonObject.getString("location"),
+                        image=jsonObject.getString("image"),
+                        userid=jsonObject.getInt("userid")
 
                     )
 

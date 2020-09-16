@@ -37,8 +37,8 @@ class technologyFragment : Fragment() {
 var posts=ArrayList<Post>()
         //var searchnewslist=ArrayList<Post>()
 
-
-        var url="https://flexuous-babies.000webhostapp.com/getElect.php"
+        var url= "http://192.168.1.3/mafqud/getElect.php"
+        //var url="https://flexuous-babies.000webhostapp.com/getElect.php"
         //var url="http://192.168.43.191/getElect.php"
         var stringRequset=object : StringRequest(Method.POST,url, Response.Listener {
 
@@ -68,7 +68,9 @@ var posts=ArrayList<Post>()
                         publisher = jsonObject.getString("uname"),
                         dateandtime = jsonObject.getString("date"),
                         tvstatus = jsonObject.getString("status"),
-                        location = jsonObject.getString("location")
+                        location = jsonObject.getString("location"),
+                        image=jsonObject.getString("image"),
+                        userid=jsonObject.getInt("userid")
                         // phone = jsonObject.getInt("phone"),
                         // award = jsonObject.getInt("award") ,
 
@@ -98,6 +100,8 @@ var posts=ArrayList<Post>()
 
               //  Toast.makeText(context,id+"\n"+title+"\n"+details+"\n"+img, Toast.LENGTH_SHORT).show()
             } else{
+
+
 
                 Toast.makeText(context,"not found", Toast.LENGTH_SHORT).show()}
 

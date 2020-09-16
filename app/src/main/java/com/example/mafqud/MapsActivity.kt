@@ -43,7 +43,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             // Add a marker in Sydney and move the camera
 
             //mMap.mapType.
-            mMap.addMarker(MarkerOptions().position(newlocation).title("Marker in Sydney"))
+            mMap.addMarker(MarkerOptions().position(newlocation).title("NON"))
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(newlocation, 20F))
             mMap.setOnMapClickListener(object :GoogleMap.OnMapClickListener {
                 override fun onMapClick(latlng :LatLng) {

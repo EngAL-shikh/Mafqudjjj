@@ -23,11 +23,12 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="562dp"
+        android:layout_height="614dp"
         android:background="@color/selver"
         app:cardCornerRadius="30dp">
 
         <LinearLayout
+            android:id="@+id/gggggg"
             android:layout_width="match_parent"
             android:layout_height="594dp"
             android:layout_gravity="center"
@@ -43,7 +44,6 @@
                 android:layout_gravity="center"
                 android:background="@drawable/emailpassword"
                 android:drawableRight="@drawable/email"
-
                 android:drawablePadding="5dp"
                 android:ems="10"
                 android:fontFamily="@font/gg"
@@ -74,7 +74,6 @@
                 android:paddingTop="10dp"
                 android:password="true"
                 android:src="@drawable/lock"
-
                 android:textSize="20sp"
                 android:textStyle="normal"
                 app:layout_constraintTop_toBottomOf="@+id/et_login_email" />
@@ -93,12 +92,11 @@
                     android:id="@+id/bt_login"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
-
-                    android:background="@drawable/butblue"
-                    android:shadowColor="#FBC02D"
+                    android:background="@drawable/buttonwithbackground"
                     android:fontFamily="@font/gg"
+                    android:shadowColor="#FBC02D"
                     android:text="تسجيل الدخول"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#F8F5F5"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"

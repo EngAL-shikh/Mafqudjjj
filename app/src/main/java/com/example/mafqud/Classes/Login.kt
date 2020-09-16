@@ -3,14 +3,15 @@ package com.example.mafqud
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.apbarlayout.MyPost
 import com.wajahatkarim3.easyvalidation.core.view_ktx.validator
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_sign_up.*
 import org.json.JSONObject
 
 class Login : AppCompatActivity() {
@@ -49,33 +50,33 @@ class Login : AppCompatActivity() {
 
     }
 
+
+
     fun getdata(){
 
-
-
-        var url="https://flexuous-babies.000webhostapp.com/checklogin.php"
+        var mypost=ArrayList<MyPost>()
+        var url= "http://192.168.1.3/mafqud/checklogin.php"
+        //var url="https://flexuous-babies.000webhostapp.com/checklogin.php"
         var stringRequset=object : StringRequest(Method.POST,url, Response.Listener {
-
-
-
                 response ->
-
             var jsonobject= JSONObject(response)
-
             if (jsonobject.getString("msg")=="found"){
+                var data=jsonobject.getJSONArray("data")
+                for (i in 0..data.length()-1){
+                    var jsonObject=data.getJSONObject(i)
 
-
-
+                    var id=jsonObject.getInt("id").toString()
+                    Log.d("printid",id)
+                    var shared= getSharedPreferences("idcheck",0)
+                    var edit=shared.edit()
+                    edit.putString("id",id)
+                    edit.commit()
+                }
                 var intent=Intent(this,MainActivity::class.java)
                 startActivity(intent)
-                Toast.makeText(this," found", Toast.LENGTH_SHORT).show()
-                //Toast.makeText(this,id+"\n"+title+"\n"+details+"\n"+img,Toast.LENGTH_SHORT).show()
             } else{
 
-                Toast.makeText(this,"not found", Toast.LENGTH_SHORT).show()}
-
-
-
+                Toast.makeText(this,"تأكد من االايميل و كلمة المرور", Toast.LENGTH_SHORT).show()}
         }, Response.ErrorListener {
 
 
@@ -92,6 +93,12 @@ class Login : AppCompatActivity() {
 
                 paramas.put("email",em)
                 paramas.put("pass",pass)
+
+
+
+
+
+
 
 
 

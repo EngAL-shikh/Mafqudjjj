@@ -36,7 +36,7 @@
 
 
             <ImageView
-                android:id="@+id/img"
+                android:id="@+id/image"
                 android:layout_width="wrap_content"
                 android:layout_height="190dp"
                 android:layout_weight="3"
@@ -59,11 +59,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="10dp"
-                         android:textDirection="rtl"
+                    android:textDirection="rtl"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     android:visibility="visible"
                     card_view:fontFamily="@font/gg"
+
                    >
 
                 </TextView>
@@ -85,7 +86,9 @@
                         android:textDirection="rtl"
                         android:textSize="20dp"
                         android:textStyle="bold"
-                        card_view:fontFamily="@font/gg"></TextView>
+                        card_view:fontFamily="@font/gg">
+
+                    </TextView>
 
                     <TextView
                         android:id="@+id/date"
@@ -99,7 +102,9 @@
                         android:text="79935"
                         android:textColorHighlight="#45A7A3A3"
                         android:textDirection="rtl"
-                        card_view:fontFamily="@font/en"></TextView>
+                        card_view:fontFamily="@font/en">
+
+                    </TextView>
                 </LinearLayout>
 
 
@@ -144,7 +149,19 @@
                 android:textDirection="rtl"
                 android:textStyle="bold|italic"
 
-                android:visibility="visible"
+                android:visibility="gone"
+                card_view:fontFamily="@font/gg"></TextView>
+
+            <TextView
+                android:id="@+id/idpost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:textDirection="rtl"
+                android:textStyle="bold|italic"
+
+                android:visibility="gone"
                 card_view:fontFamily="@font/gg"></TextView>
 
 

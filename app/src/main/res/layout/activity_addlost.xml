@@ -4,35 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="#FBC02D"
     android:orientation="vertical"
     tools:context=".addlost"
     tools:ignore="ExtraText">
-    <ImageView
-        android:layout_width="229dp"
-        android:layout_height="127dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="50dp"
-        android:paddingTop="20dp"
-        android:src="@drawable/b">
 
-    </ImageView>
+
+    <TextView
+        android:layout_width="229dp"
+        android:layout_height="71dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/gg"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="انشاء اعلان"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"></TextView>
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
 
-        android:layout_height="650dp"
+        android:layout_height="781dp"
         android:layout_marginTop="-40dp"
         android:background="@color/selver"
         app:cardCornerRadius="30dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
 
+
+            android:layout_width="match_parent"
+            android:layout_height="779dp"
+
+            android:layout_marginBottom="200dp"
             android:orientation="vertical"
             tools:context=".addlost"
             tools:ignore="ExtraText">
@@ -73,14 +79,14 @@
             </Spinner>
 
             <EditText
-                android:id="@+id/name_id"
+                android:id="@+id/titlepost_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/emailpassword"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/gg"
-                android:hint="العنوان"
+                android:hint="تلميح عن الشيء المفقود /الموجود"
                 android:padding="15dp"
                 android:textColor="#585656"
                 android:textColorHighlight="#000000"
@@ -152,6 +158,30 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/butblue"
+                android:drawableBottom="@drawable/location_24dp"
+
+                android:ems="10"
+
+                android:fontFamily="@font/gg"
+
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:text="الموقع"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimaryDark"
+
+                android:textSize="15sp">
+
+
+            </Button>
+
+            <Button
+                android:id="@+id/choseImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/butblue"
                 android:ems="10"
 
                 android:fontFamily="@font/gg"
@@ -159,11 +189,11 @@
                 android:inputType="textMultiLine"
 
                 android:padding="15dp"
-                android:text="الموقع"
+                android:text="اختر صورة "
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimaryDark"
-                android:drawableBottom="@drawable/location_24dp"
+
 
                 android:textSize="15sp">
 

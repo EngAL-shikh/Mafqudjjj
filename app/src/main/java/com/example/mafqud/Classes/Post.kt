@@ -7,8 +7,12 @@ data class  Post(
     var description:String,
     var publisher:String,
     val dateandtime:String,
-   var tvstatus:String
+   var tvstatus:String,
+    var image:String,
+    var userid:Int
    // var phone: Int,
    // var award: Int
 )  {
 }
+
+data class MyPost(var id:Int){}

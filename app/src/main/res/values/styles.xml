@@ -10,4 +10,12 @@
     </style>
 
 
+    <style name="mystyle">
+
+        <item name="android:fontFamily">@font/gg</item>
+        <item name="android:textColor">@color/black</item>
+
+
+    </style>
+
 </resources>

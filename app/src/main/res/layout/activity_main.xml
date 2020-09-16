@@ -23,14 +23,19 @@
             android:orientation="horizontal"
             android:visibility="visible">
 
-            <ImageView
-                android:id="@+id/minu"
+            <TextView
+                android:id="@+id/profile_id"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.1"
+                android:layout_weight="0.2"
                 android:paddingTop="10dp"
                 android:paddingRight="20dp"
-                android:src="@drawable/minu"></ImageView>
+                android:fontFamily="@font/gg"
+                android:textSize="20sp"
+                android:text="الرئيسية"
+                android:textStyle="bold"
+
+                ></TextView>
 
             <TextView
                 android:id="@+id/tv_news_title"
@@ -91,20 +96,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            app:backgroundTint="#FFAF1D"
-            android:elevation="8dp"
             android:background="@drawable/myrect"
-
-
-
-            app:fabAlignmentMode="center"
-
+            android:elevation="8dp"
+            app:backgroundTint="#FFAF1D"
+            app:fabAlignmentMode="end"
             app:fabCradleRoundedCornerRadius="24dp"
-
-
-            app:fabCradleVerticalOffset="12dp"
+            app:fabCradleVerticalOffset="5dp"
             app:hideOnScroll="true"
-            app:navigationIcon="@drawable/ic_search_black_24dp" />
+            app:navigationIcon="@drawable/profile" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -157,11 +156,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
 
-                >
+                android:visibility="visible">
 
             </androidx.viewpager.widget.ViewPager>
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <ImageView
+            android:id="@+id/imagecon"
+            android:layout_width="match_parent"
+            android:layout_height="524dp"
+            android:src="@drawable/noconn"
+            android:visibility="gone">
+
+        </ImageView>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
